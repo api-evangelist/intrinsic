@@ -1,7 +1,29 @@
 aid: intrinsic
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/intrinsic.png
 name: Intrinsic
-description: Intrinsic is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Intrinsic is a unified Trust & Safety platform that gives safety teams a single
+  API and dashboard to detect, investigate, and enforce against abuse across
+  user- and AI-generated content, fraud, and marketplace abuse. The platform
+  surfaces machine-learning classifiers (for example text toxicity and IP trust
+  scoring), account graph lineage for linkage analysis, geo enrichers, and global
+  intelligence signals through a synchronous API, and lets teams author, version,
+  deploy, and monitor real-time anti-abuse rules from a hosted dashboard. Founded
+  in 2022 in San Francisco by Karine Mellata and Michael Lin (previously on Trust
+  & Safety ML and data-engineering infrastructure at Apple and Discord), Intrinsic
+  has since rebranded to Variance (variance.co); the Intrinsic-branded developer
+  surfaces at docs.intrinsicapi.com and api.intrinsicapi.com remain in service.
 url: https://raw.githubusercontent.com/api-evangelist/intrinsic/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +31,57 @@ x-backed-by:
 - a16z
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-rebranded-to: Variance
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Trust and Safety
+- Content Moderation
+- Anti-Abuse
+- Fraud Detection
+- Machine Learning
+- Risk Intelligence
+- API
+apis:
+- name: Intrinsic API
+  description: >-
+    Unified Trust & Safety API exposing ML classifiers, enrichments, account
+    graph lineage, and real-time rule evaluation for anti-abuse workflows.
+    Access is gated behind an issued API key; developer documentation requires
+    a request-access code.
+  humanURL: https://docs.intrinsicapi.com/
+  baseURL: https://api.intrinsicapi.com
+  properties:
+  - type: Documentation
+    url: https://docs.intrinsicapi.com/
+  - type: GettingStarted
+    url: https://docs.intrinsicapi.com/getting-started/welcome
+common:
+- type: Website
+  url: https://withintrinsic.com
+- type: DeveloperPortal
+  url: https://docs.intrinsicapi.com/
+- type: Documentation
+  url: https://docs.intrinsicapi.com/
+- type: SecurityTxt
+  url: well-known/intrinsic-security.txt
+- type: WellKnown
+  url: well-known/intrinsic-well-known.yml
+- type: VulnerabilityDisclosure
+  url: security/intrinsic-vulnerability-disclosure.yml
+- type: Security
+  url: security/intrinsic-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/intrinsic-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
